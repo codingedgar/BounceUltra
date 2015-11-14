@@ -179,8 +179,8 @@ MonoBehaviour:
   clickMe: {fileID: 0}
   identifier: {fileID: 0}
   renderer: {fileID: 0}
-  amountOfClicks: 5
-  force: 500
+  amountOfClicks: 1
+  force: 700
 --- !u!114 &11473934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,7 +255,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: amountOfClicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: force
+      value: 700
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 175890}

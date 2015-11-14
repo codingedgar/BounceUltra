@@ -6,7 +6,9 @@ public class BigSphereSetUp : SphereSetUp {
 	#region Variables
 
 	public int amountOfClicks;
-	public float force = 500;
+	public float force = 700;
+	//public float radius = 5.0F;
+	//public float power = 10.0F;
 	int playersCount;
 
 	#endregion
