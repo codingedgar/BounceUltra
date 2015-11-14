@@ -20,12 +20,14 @@ public class ScoreTextUI : MonoBehaviour
     void Awake()
     {
         this.myText = this.gameObject.GetComponent<Text>();
-
-
+        
+        if (this.friend)
         Messenger.AddListener<int>(ScoreManager.UpdateScoreMsg, UpdateEventHandler);
+
+        if(this.enemy)
+            Messenger.AddListener<int>(ScoreManager.UpdateScoreEnemyMsg, UpdateEventHandler);
     }
-
-
+    
     void UpdateEventHandler(int value)
     {
 
