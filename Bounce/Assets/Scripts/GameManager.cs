@@ -17,12 +17,11 @@ public class GameManager : MonoBehaviour
 
     public PlayerUI[] playerUIs = null;
 
-
-
     #region Score
     public ScoreManager scoreManager = null;
 
-    public float EnemySpeed = 0.01f;
+    [SerializeField]
+    float EnemySpeed;
 
     #endregion
     #endregion
@@ -48,9 +47,11 @@ public class GameManager : MonoBehaviour
         getPlayersUIs();
         getRandomTypes();
         getMyType();
-
+        
         StartCoroutine(Enemy());
     }
+
+    
 
     IEnumerator Enemy()
     {

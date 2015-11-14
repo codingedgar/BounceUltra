@@ -28,7 +28,19 @@ public class scoreBarUI : MonoBehaviour
         if (this.enemy)
             Messenger.AddListener<int>(ScoreManager.UpdateScoreEnemyMsg, UpdateEventHandler);
     }
-    
+
+    void Start()
+    {
+       
+
+        if (this.friend)
+            Messenger.AddListener<int>(ScoreManager.UpdateScoreMsg, UpdateEventHandler);
+
+        if (this.enemy)
+            Messenger.AddListener<int>(ScoreManager.UpdateScoreEnemyMsg, UpdateEventHandler);
+    }
+
+
     void UpdateEventHandler(int value)
     {
         float ammount = 0.0f;
@@ -38,4 +50,5 @@ public class scoreBarUI : MonoBehaviour
         this.myImage.fillAmount = ammount;
 
     }
+    
 }

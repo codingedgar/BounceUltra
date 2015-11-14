@@ -42,6 +42,11 @@ public class ScoreManager
         totalScoreEnemy++;
 
         Messenger.Broadcast<int>(UpdateScoreEnemyMsg, totalScoreEnemy);
+
+        if (totalScoreEnemy >= maxScore )
+        {
+            ChangeSceneTo.ChangeTo(scenesInGame.Start);
+        }
     }
 
     #endregion
