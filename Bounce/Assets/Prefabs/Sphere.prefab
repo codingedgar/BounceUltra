@@ -13,6 +13,8 @@ GameObject:
   - 23: {fileID: 2330340}
   - 54: {fileID: 5473382}
   - 114: {fileID: 11417790}
+  - 114: {fileID: 11460250}
+  - 114: {fileID: 11455420}
   - 114: {fileID: 11475514}
   m_Layer: 8
   m_Name: Sphere
@@ -139,6 +141,41 @@ MonoBehaviour:
   clickMe: {fileID: 0}
   identifier: {fileID: 0}
   renderer: {fileID: 0}
+--- !u!114 &11455420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fdc8bb4eff504a7bafcdb5dfc21cf0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11460250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd71dcb0056342b08cb3e8851fac00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  minSpeed: 1
+  maxSpeed: 5
+  minRotationSpeed: 90
+  maxRotationSpeed: 358.019989
+  fadeWaitTime: .5
+  fadeTime: 2
+  useGravity: 1
+  colliderThickness: .125
+  useNormals: 0
+  useMeshBoundsCenter: 0
+  allowShadows: 0
+  shadersAlreadyHandleTransparency: 0
 --- !u!114 &11466294
 MonoBehaviour:
   m_ObjectHideFlags: 1
