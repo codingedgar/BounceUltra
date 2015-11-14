@@ -1,0 +1,10 @@
+Bounce/Library/
+Bounce/LibraryIOS/
+Bounce/LibraryAndroid/
+Bounce/Temp/
+*.csproj
+*.pidb
+*.unityproj
+*.sln
+*.userprefs
+Bounce/Builds/
