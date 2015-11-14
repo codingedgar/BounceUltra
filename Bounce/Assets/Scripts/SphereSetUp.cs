@@ -7,14 +7,16 @@ public class SphereSetUp : MonoBehaviour {
 
     #region Variables
 
-    ClickMe clickMe = null;
-    SpheareIdentifier identifier = null;
+    public ClickMe clickMe = null;
+    public SpheareIdentifier identifier = null;
+    public MeshRenderer renderer = null;
     #endregion
 
     #region Methods
     
     public void Init()
     {
+        this.renderer = GetComponent<MeshRenderer>();
         addComponents();
         InitComponentes();
     }
@@ -29,7 +31,7 @@ public class SphereSetUp : MonoBehaviour {
 
     void InitComponentes()
     {
-        this.identifier.RamdomType();
+        this.identifier.InitWithRandom(this);
     }
 
     #endregion
