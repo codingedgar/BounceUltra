@@ -24,7 +24,7 @@ public class TextScore : MonoBehaviour
     {
         text = GetComponent<Text>();
 
-        Messenger.AddListener<int>(GameManager.UpdateScoreMsg, updateScoreEventHandler);
+        Messenger.AddListener<int>(ScoreManager.UpdateScoreMsg, updateScoreEventHandler);
     }
 
     void updateScoreEventHandler(int value)
