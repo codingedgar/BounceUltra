@@ -2,9 +2,7 @@
 using System.Collections;
 
 public class SphereSetUp : MonoBehaviour {
-
-    
-
+	
     #region Variables
 
     public ClickMe clickMe = null;
@@ -14,7 +12,7 @@ public class SphereSetUp : MonoBehaviour {
 
     #region Methods
     
-    public void Init()
+    public virtual void Init()
     {
         this.renderer = GetComponent<MeshRenderer>();
         addComponents();
@@ -29,7 +27,7 @@ public class SphereSetUp : MonoBehaviour {
         this.identifier = this.gameObject.AddComponent<SpheareIdentifier>();
     }
 
-    void InitComponentes()
+    protected void InitComponentes()
     {
         this.identifier.InitWithRandom(this);
     }

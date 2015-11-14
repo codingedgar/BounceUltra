@@ -46,11 +46,15 @@ public class SpawnCreator : MonoBehaviour {
 	/// </summary>
 	public float initialForceMax;
 
+	public bool isBigBallSpawner;
+
 	/// <summary>
 	/// Starts this instance
 	/// </summary>
-	void Start () {
-		StartCoroutine(loop());
+	void Start()
+	{
+		if(isBigBallSpawner)
+			StartCoroutine(loop());
 	}
 
 	/// <summary>
@@ -71,10 +75,18 @@ public class SpawnCreator : MonoBehaviour {
 		}
 	}
 
+	public void SpawnWave() {
+		int waveAmount = Random.Range(waveAmountMin, waveAmountMax);
+		for (int i = 0; i < waveAmount; i++)
+		{
+			Spawn();
+		}
+	}
+
 	/// <summary>
 	/// Spawn the Object
 	/// </summary>
-	void Spawn () {
+	public void Spawn () {
 		GameObject reference = (GameObject)Instantiate(spawnedObject, transform.position, Quaternion.identity);
 		reference.GetComponent<Rigidbody>().AddForce(Random.insideUnitSphere * Random.Range(initialForceMin,initialForceMax));
 
