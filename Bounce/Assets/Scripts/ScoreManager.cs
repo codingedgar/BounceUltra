@@ -23,7 +23,7 @@ public class ScoreManager
     public int totalScoreEnemy = 0;
     public int totalScoreAlly = 0;
 
-    public int maxScore = 30;
+    public int maxScore = 10;
     #endregion
 
     #region Methods
