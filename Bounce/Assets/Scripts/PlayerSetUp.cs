@@ -5,6 +5,8 @@ using UnityEngine.Networking;
 public class PlayerSetUp : MonoBehaviour {
 
     public bool isMe;
+    public bool isEnemy;
+
     public int playerNumber;
 
     public SpheareType myType;
