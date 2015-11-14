@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     #region Score
     public ScoreManager scoreManager = null;
 
+    public float EnemySpeed = 0.01f;
 
     #endregion
     #endregion
@@ -47,6 +48,17 @@ public class GameManager : MonoBehaviour
         getPlayersUIs();
         getRandomTypes();
         getMyType();
+
+        StartCoroutine(Enemy());
+    }
+
+    IEnumerator Enemy()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(EnemySpeed);
+            this.scoreManager.UpdateEnemyScore();
+        }
     }
 
     void getMyType()
@@ -71,7 +83,7 @@ public class GameManager : MonoBehaviour
     void getPlayersUIs()
     {
         this.playerUIs = FindObjectsOfType<PlayerUI>();
-        
+
     }
 
     void getRandomTypes()

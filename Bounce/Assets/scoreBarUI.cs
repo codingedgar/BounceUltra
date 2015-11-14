@@ -20,15 +20,22 @@ public class scoreBarUI : MonoBehaviour
     void Awake()
     {
         this.myImage = this.gameObject.GetComponent<Image>();
-        Messenger.AddListener<int>(ScoreManager.UpdateScoreMsg, UpdateEventHandler);
+        this.myImage.fillAmount = 0.0f;
+
+        if (this.friend)
+            Messenger.AddListener<int>(ScoreManager.UpdateScoreMsg, UpdateEventHandler);
+
+        if (this.enemy)
+            Messenger.AddListener<int>(ScoreManager.UpdateScoreEnemyMsg, UpdateEventHandler);
     }
-
-
+    
     void UpdateEventHandler(int value)
     {
+        float ammount = 0.0f;
 
-
+        ammount = (value / (float)GameManager.Instance.scoreManager.maxScore);
+        
+        this.myImage.fillAmount = ammount;
 
     }
-
 }

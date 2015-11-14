@@ -21,7 +21,7 @@ public class BigSphereSetUp : SphereSetUp {
     {
 		this.renderer = GetComponent<MeshRenderer>();
 		addComponents();
-		InitComponentes();
+		//InitComponentes();
 		playersCount = 0;
     }
     
@@ -30,7 +30,7 @@ public class BigSphereSetUp : SphereSetUp {
         this.clickMe = this.gameObject.GetComponentInChildren<ClickArea>().gameObject.AddComponent<BigClickMe>();
 		((BigClickMe)this.clickMe).force = force;
 
-        this.identifier = this.gameObject.AddComponent<SpheareIdentifier>();
+        //this.identifier = this.gameObject.AddComponent<SpheareIdentifier>();
     }
 
 	public bool addToCounter() {

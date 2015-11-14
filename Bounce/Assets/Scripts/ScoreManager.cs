@@ -2,6 +2,7 @@
 
 public class ScoreManager
 {
+
     #region Variables
     public const string UpdateScoreMsg = "UpdateScoreMsg";
     public const string UpdateScoreAccumulatorMsg = "UpdateScoreAccumulatorMsg";
@@ -22,7 +23,7 @@ public class ScoreManager
     public int totalScoreEnemy = 0;
     public int totalScoreAlly = 0;
 
-    public int maxScore = 40;
+    public int maxScore = 30;
     #endregion
 
     #region Methods
@@ -39,6 +40,8 @@ public class ScoreManager
     public void UpdateEnemyScore()
     {
         totalScoreEnemy++;
+
+        Messenger.Broadcast<int>(UpdateScoreEnemyMsg, totalScoreEnemy);
     }
 
     #endregion
