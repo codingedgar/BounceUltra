@@ -26,6 +26,7 @@ public class ClickMe : MonoBehaviour
 
     public void Destroy()
     {
+        this.target.BroadcastMessage("Explode");
         Destroy(this.target);
     }
     #endregion
