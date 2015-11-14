@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2330340}
   - 54: {fileID: 5473382}
   - 114: {fileID: 11417790}
+  - 114: {fileID: 11475514}
   m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
@@ -135,6 +136,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce063519a2457749a9a4e3b1a90e992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickMe: {fileID: 0}
+  identifier: {fileID: 0}
+  renderer: {fileID: 0}
 --- !u!114 &11466294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,6 +150,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa4f064379636c4daffce5793359e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11475514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd71dcb0056342b08cb3e8851fac00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  minSpeed: 1
+  maxSpeed: 5
+  minRotationSpeed: 90
+  maxRotationSpeed: 360
+  fadeWaitTime: .5
+  fadeTime: 2
+  useGravity: 1
+  colliderThickness: .125
+  useNormals: 0
+  useMeshBoundsCenter: 0
+  allowShadows: 0
+  shadersAlreadyHandleTransparency: 0
 --- !u!135 &13502366
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -194,6 +222,34 @@ Prefab:
       value: 
       objectReference: {fileID: 13400000, guid: 28a248e8a6987544385bfc12cc43d5c7,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: useNormals
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: useMeshBoundsCenter
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: allowShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shadersAlreadyHandleTransparency
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colliderThickness
+      value: .125
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: useGravity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 124930}
