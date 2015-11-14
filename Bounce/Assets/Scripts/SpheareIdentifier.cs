@@ -13,7 +13,7 @@ public static class SpheareTypeExtentions
     public static Sprite ToSprite(this SpheareType type)
     {
         Sprite returner = null;
-        returner = Resources.Load<Sprite>("Materials/Sprite" + type.ToString());
+        returner = Resources.Load<Sprite>("Sprites/Sprite" + type.ToString());
         return returner;
     }
 
