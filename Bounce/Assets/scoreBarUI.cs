@@ -50,5 +50,11 @@ public class scoreBarUI : MonoBehaviour
         this.myImage.fillAmount = ammount;
 
     }
-    
+
+     public void Init(SpheareType type)
+    {
+        myImage.overrideSprite = type.ToSprite();
+        
+    }
+
 }

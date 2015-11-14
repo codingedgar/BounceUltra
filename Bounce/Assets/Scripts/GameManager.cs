@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public PlayerUI[] playerUIs = null;
 
+    public scoreBarUI scoreBar = null;
+
     #region Score
     public ScoreManager scoreManager = null;
 
@@ -84,6 +86,7 @@ public class GameManager : MonoBehaviour
     void getPlayersUIs()
     {
         this.playerUIs = FindObjectsOfType<PlayerUI>();
+        this.scoreBar = FindObjectOfType<scoreBarUI>();
 
     }
 
@@ -117,6 +120,13 @@ public class GameManager : MonoBehaviour
     void setPlyerUIS(PlayerSetUp player, PlayerUI colorUI)
     {
         colorUI.Init(player, player.myType);
+        setImageBar(player.myType);
+    }
+
+    void setImageBar(SpheareType type) {
+
+        this.scoreBar.Init(type);
+
     }
 
 
