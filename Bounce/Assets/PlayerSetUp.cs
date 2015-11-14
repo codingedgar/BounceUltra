@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.Networking;
 
-public class PlayerSetUp : NetworkBehaviour {
+public class PlayerSetUp : MonoBehaviour {
 
     public bool isMe;
     public int playerNumber;
