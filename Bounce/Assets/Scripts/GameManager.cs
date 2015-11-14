@@ -39,6 +39,15 @@ public class GameManager : MonoBehaviour
         getPlayers();
         getPlayersUIs();
         getRandomTypes();
+        getMyType();
+    }
+
+    void getMyType()
+    {
+        for (int i = players.Length - 1; i >= 0; i--)
+        {
+            if (this.players[i].isMe) this.myType = this.players[i].myType;
+        }
     }
 
     void getPlayers()
