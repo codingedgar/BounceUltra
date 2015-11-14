@@ -9,10 +9,13 @@ public class ScoreManager
     #endregion
 
     #region Methods
-    public void UpdateScoreAccumulator(int value)
+    public void UpdateScoreAccumulator(SphereSetUp type, int value)
     {
-        totalScore += value;
-        Messenger.Broadcast<int>(UpdateScoreMsg, totalScore);
+        if (type.identifier.type == GameManager.Instance.myType)
+        {
+            totalScore += value;
+            Messenger.Broadcast<int>(UpdateScoreMsg, totalScore);
+        }
     }
 
 

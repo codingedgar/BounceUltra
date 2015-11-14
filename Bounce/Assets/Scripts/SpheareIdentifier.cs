@@ -3,13 +3,20 @@ using System;
 public enum SpheareType
 {
     Blue,
-    Green,
     Red,
+    Green,
     Yellow,
 }
 
 public static class SpheareTypeExtentions
 {
+    public static Sprite ToSprite(this SpheareType type)
+    {
+        Sprite returner = null;
+        returner = Resources.Load<Sprite>("Materials/Sprite" + type.ToString());
+        return returner;
+    }
+
     public static Material ToMaterial (this SpheareType type)
     {
         Material returner = null;

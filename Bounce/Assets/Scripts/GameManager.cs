@@ -5,11 +5,14 @@ public class GameManager : MonoBehaviour
 {
 
     #region Variables
- 
+    
 
     public static GameManager Instance;
 
     public ScoreManager scoreManager = null;
+
+    public PlayerSetUp[] players = null;
+    public SpheareType myType = SpheareType.Red;
     #endregion
 
 
@@ -28,6 +31,18 @@ public class GameManager : MonoBehaviour
     void Init()
     {
         this.scoreManager = new ScoreManager();
+
+        getPlayers();
+    }
+
+    void getPlayers()
+    {
+        this.players = this.gameObject.GetComponentsInChildren<PlayerSetUp>();
+
+        for (int i = players.Length - 1; i >= 0; i--)
+        {
+            players[i].Init();
+        }
     }
 
     #endregion
