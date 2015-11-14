@@ -1,10 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ClickMe : MonoBehaviour {
+public class ClickMe : MonoBehaviour
+{
 
-	void OnMouseDown()
+    #region Variables
+    int scoreToGiveAtClick = 1;
+    GameObject target = null;
+    #endregion
+
+    #region Methods
+
+    public void Start()
     {
-        this.gameObject.SetActive(false);
+        target = this.gameObject.GetComponentInParent<SphereSetUp>().gameObject;
     }
+    
+    void OnMouseDown()
+    {
+
+        GameManager.Instance.scoreManager.UpdateScoreAccumulator(scoreToGiveAtClick);
+
+        Destroy();
+    }
+
+    public void Destroy()
+    {
+        Destroy(this.target);
+    }
+    #endregion
 }

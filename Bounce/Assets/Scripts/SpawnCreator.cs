@@ -77,5 +77,7 @@ public class SpawnCreator : MonoBehaviour {
 	void Spawn () {
 		GameObject reference = (GameObject)Instantiate(spawnedObject, transform.position, Quaternion.identity);
 		reference.GetComponent<Rigidbody>().AddForce(Random.insideUnitSphere * Random.Range(initialForceMin,initialForceMax));
+
+        reference.GetComponent<SphereSetUp>().Init();
 	}
 }
