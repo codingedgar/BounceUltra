@@ -5,18 +5,28 @@ public class ScoreManager
     #region Variables
     public const string UpdateScoreMsg = "UpdateScoreMsg";
     public const string UpdateScoreAccumulatorMsg = "UpdateScoreAccumulatorMsg";
+
+    #region Enemy
+    public const string UpdateScoreAllyMsg = "UpdateScoreAllyMsg";
+    public const string UpdateScoreAccumulatorAllyMsg = "UpdateScoreAccumulatorAllyMsg";
+
+    #endregion
+
+    #region Ally
+    public const string UpdateScoreEnemyMsg = "UpdateScoreEnemyMsg";
+    public const string UpdateScoreAccumulatorEnemyMsg = "UpdateScoreAccumulatorEnemyMsg";
+    #endregion
+
     public int totalScore = 0;
 
-    public ScoreManagerView view = null;
+    public int totalScoreEnemy = 0;
+    public int totalScoreAlly = 0;
+
+    public int maxScore = 40;
     #endregion
 
     #region Methods
-
-    public ScoreManager()
-    {
-        this.view = new ScoreManagerView();
-    }
-
+    
     public void UpdateScoreAccumulator(SphereSetUp type, int value)
     {
         if (type.identifier.type == GameManager.Instance.myType)
@@ -26,7 +36,10 @@ public class ScoreManager
         }
     }
 
-
+    public void UpdateEnemyScore()
+    {
+        totalScoreEnemy++;
+    }
 
     #endregion
 }

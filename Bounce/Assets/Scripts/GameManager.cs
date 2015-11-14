@@ -11,12 +11,19 @@ public class GameManager : MonoBehaviour
     #region Variables
     public static GameManager Instance;
 
-    public ScoreManager scoreManager = null;
 
     public PlayerSetUp[] players = null;
     public SpheareType myType = SpheareType.Red;
 
     public PlayerUI[] playerUIs = null;
+
+
+
+    #region Score
+    public ScoreManager scoreManager = null;
+
+
+    #endregion
     #endregion
 
 
