@@ -6,23 +6,26 @@ public class ClickMe : MonoBehaviour
 
     #region Variables
     int scoreToGiveAtClick = 1;
-    GameObject target = null;
-    SphereSetUp setup;
-    #endregion
+    protected GameObject target = null;
+    protected SphereSetUp setup;
+	protected Rigidbody _rigidbody = null;
+	#endregion
 
-    #region Methods
+	#region Methods
 
-    public void Start()
+	public void Start()
     {
         setup = this.gameObject.GetComponentInParent<SphereSetUp>();
 
         target = setup.gameObject;
-    }
+
+		_rigidbody = target.GetComponent<Rigidbody>();
+	}
     
-    void OnMouseDown()
+    protected virtual void OnMouseDown()
     {
 
-        GameManager.Instance.scoreManager.UpdateScoreAccumulator(this.setup, scoreToGiveAtClick);
+		GameManager.Instance.scoreManager.UpdateScoreAccumulator(this.setup, scoreToGiveAtClick);
 
         Destroy();
     }
