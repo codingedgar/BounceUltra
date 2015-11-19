@@ -25,6 +25,8 @@ public class SphereSetUp : MonoBehaviour {
         this.clickMe = this.gameObject.GetComponentInChildren<ClickArea>().gameObject.AddComponent<ClickMe>();
 
         this.identifier = this.gameObject.AddComponent<SpheareIdentifier>();
+
+       
     }
 
     protected void InitComponentes()

@@ -16,8 +16,13 @@ public class BigSphereSetUp : SphereSetUp {
 	#region Methods
 
 	void Start() {
-		Init();
-	}
+       /* Prueba de empuja hacia una direccion
+       Vector3 dir = new Vector3(0f, 500f, 0f);
+        dir.Normalize();
+        this.gameObject.GetComponent<Rigidbody>().AddForce(dir * 300);
+        */
+        Init();
+    }
 
     public override void Init()
     {
@@ -32,11 +37,13 @@ public class BigSphereSetUp : SphereSetUp {
         this.clickMe = this.gameObject.GetComponentInChildren<ClickArea>().gameObject.AddComponent<BigClickMe>();
 		((BigClickMe)this.clickMe).force = force;
 
+       
         //this.identifier = this.gameObject.AddComponent<SpheareIdentifier>();
     }
 
 	public bool addToCounter() {
-		playersCount++;
+        
+        playersCount++;
 		return playersCount >= amountOfClicks;
 	}
 

@@ -134,8 +134,8 @@ public class MeshExploder : MonoBehaviour {
 			3 * 2 : // one triangle, both sides
 			totalTriangles * 3;
 		
-		const int vertexLimit = 65534;
-		if (newTotalVertices > vertexLimit) {
+		const int vertexLimit = 10922; // 65534 numero original
+        if (newTotalVertices > vertexLimit) {
 			Debug.LogError("The mesh has too many triangles to explode. It must have" +
 				" " + ((vertexLimit / 3) / 2) + " or fewer triangles.");
 			return;
